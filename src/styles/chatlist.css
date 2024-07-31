@@ -1,0 +1,145 @@
+/* Main List Scrollbar Styling */
+.main-list {
+    flex: 1;
+    overflow: scroll;
+}
+
+.main-list::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+.main-list::-webkit-scrollbar-track {
+    background: hsla(33, 52%, 28%, 0.26); /* Background of the track */
+}
+
+.main-list::-webkit-scrollbar-thumb {
+    background: hsl(29, 73%, 26%); /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Round corners of the scrollbar thumb */
+}
+
+.main-list::-webkit-scrollbar-thumb:hover {
+    background: hsl(29, 76%, 38%); /* Color of the scrollbar thumb on hover */
+}
+
+/* Firefox */
+.main-list {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(29, 74%, 32%) hsla(33, 53%, 31%, 0.26);
+}
+
+/* Inner Elements */
+.main-list .search {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 15px;
+}
+
+.main-list .search-bar {
+    flex: 1;
+    background-color: hsla(33, 53%, 31%, 0.26);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.main-list .search-bar input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: rgb(16, 14, 14);
+    flex: 1;
+}
+
+.main-list .search-bar img {
+    height: 25px;
+    width: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.main-list .plus {
+    width: 31px;
+    height: 31px;
+    border: none;
+    border-radius: 80%;
+    cursor: pointer;
+}
+
+.main-list .details {
+    display: flex;
+    align-self: center;
+    gap: 15px;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid hsl(29, 70%, 36%);
+
+    img{
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .text-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        span{
+            font-weight: 800;
+        }
+
+        p{
+            font-family: 15px;
+            font-weight: 100;
+        }
+        
+
+    }
+    .unread-count {
+        background-color: rgba(101, 5, 5, 0.801);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-left: 8px;
+    }
+    
+    .glow {
+        animation: glow 1s infinite alternate;
+    }
+    
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 5px red;
+        }
+        to {
+            box-shadow: 0 0 20px red, 0 0 30px red, 0 0 40px red;
+        }
+    }
+    
+    .remove-button {
+        margin-left: 10px;
+        width: 38px;
+        height: 22px;
+      
+        background-color: rgb(107, 62, 4);
+        color: #fff;
+        border: none;
+        border-radius: 3px; /* Smaller border radius */
+        font-size: 9px; /* Smaller font size */
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+    
+    .remove-button:hover {
+        opacity: 0.7;
+    }
+    
+    
+
+}
